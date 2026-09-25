@@ -1,0 +1,49 @@
+{
+  "schema": "SHP/SourceSetManifest/v1",
+  "source_set": {
+    "id": "core",
+    "version": 1,
+    "purpose": "Core SHP governance, mathematics, evaluation, verification and certification architecture working source set."
+  },
+  "repository": {
+    "commit": "3ddb78c8b8342af55a53d7762128b88de9cd8260"
+  },
+  "inventory": {
+    "schema": "SHP/CorpusInventoryDiagnostic/v1",
+    "generator_sha256": "81b2ccd94d3bee0be3b12c25830d3a91fa4aca95e42a5ef6cbba94ffae90adc5"
+  },
+  "artifacts": [
+    {
+      "path": "Governance/StructuredHardeningProject-Charter-v3.0.odt",
+      "sha256": "077302f2e6730bdb79ae8fbb9d7af97c95933713df054e24ea26a15b1781e413"
+    },
+    {
+      "path": "Governance/SHP-SpecificationAuthorityRegistry–v2.0.odt",
+      "sha256": "4fbd4dc83acdf9bcaf4ce3b9146f35acd10cfe84571ad3effc9e7278d67707bf"
+    },
+    {
+      "path": "Hardening/SHP-TierMathematicsSpecification-v2.1.odt",
+      "sha256": "7d6fd4f894629ddad70571db0fc82ecf6a866973905e19e641d8d47e87c5e474"
+    },
+    {
+      "path": "Governance/SHP-ControlEvaluationLanguage–v2.0.odt",
+      "sha256": "23f300c2b493d73d411e3dd18d7d5b8ff89ea6ef00ed16c4ee17ddb49730d724"
+    },
+    {
+      "path": "Governance/SHP-VerificationEngineArchitecture–v2.0.odt",
+      "sha256": "59c965039e695671fc903e3d09013c6945dc2a05fba26f5454d7e298ce9f8031"
+    },
+    {
+      "path": "Governance/SHP-CertificationEvidenceModel–v2.0.odt",
+      "sha256": "fd51e08d39e9960b2e726b47f5edde078c13fcf97ea457db6cc3c0032806fbe3"
+    },
+    {
+      "path": "Governance/SHP-CertificationDecisionEngine-v2.1.odt",
+      "sha256": "d80f9df45c7de6f5c0a80505f98c23b521273a45a828249771e7e97beb203ea1"
+    },
+    {
+      "path": "Governance/SHP-CertificationTrustArchitecture–v2.1.odt",
+      "sha256": "3d73d2cf3df9ee20ca8c1c1bf6d484f2f380a55ae34c56cf75fba23203546b3e"
+    }
+  ]
+}
