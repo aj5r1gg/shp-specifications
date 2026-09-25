@@ -1,0 +1,41 @@
+{
+  "schema": "SHP/SourceSetManifest/v1",
+  "source_set": {
+    "id": "wifi",
+    "version": 1,
+    "purpose": "Wi-Fi working source set selecting the non-Superseded Wi-Fi corpus. Selection does not determine lifecycle status, authority, platform admission, tier status or certification eligibility."
+  },
+  "repository": {
+    "commit": "3ddb78c8b8342af55a53d7762128b88de9cd8260"
+  },
+  "inventory": {
+    "schema": "SHP/CorpusInventoryDiagnostic/v1",
+    "generator_sha256": "81b2ccd94d3bee0be3b12c25830d3a91fa4aca95e42a5ef6cbba94ffae90adc5"
+  },
+  "artifacts": [
+    {
+      "path": "Hardening/WiFi/SHP-Wi-FiControlCatalogueMathematics–v1.0.odt",
+      "sha256": "62ed01086f4867e4a866643026e6c2952efb7fda9d1670ec5541025d6913a205"
+    },
+    {
+      "path": "Hardening/WiFi/SHP-Wi-FiPlatformMathematicsSpecification–v1.0.odt",
+      "sha256": "4955f45272e789b75d3d5fd2ca54026863d1fae2d4df64d7d12abacd62579c69"
+    },
+    {
+      "path": "Hardening/WiFi/SHP-Wi-FiThreatModelSpecification-v1.0.odt",
+      "sha256": "a95fe1c65c2a58f12a584a842b79c52c1833f8005a8d6b0a96b147c0459829dc"
+    },
+    {
+      "path": "Hardening/WiFi/SHP-Wi-FiTier1-FullControlCatalogue–v1.0.odt",
+      "sha256": "0b4a756b2a4b9fc131299452e8892f9ab1ce834079d24b4ca6a20812c2b7987c"
+    },
+    {
+      "path": "Hardening/WiFi/SHP-Wi-FiTier2-FullControlCatalogue–v1.0.odt",
+      "sha256": "c501df4e2d9442b1ba107a116759c0200dd7d3393b8026bf9ee4b84886afc752"
+    },
+    {
+      "path": "Hardening/WiFi/SHP-Wi-FiTier3-FullControlCatalogue–v1.0.odt",
+      "sha256": "b551699eb20904764792cb15dfc8b9239fb18ae715115412ca8c61c2ffda5470"
+    }
+  ]
+}
