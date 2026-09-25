@@ -1,0 +1,20 @@
+# LibreOffice temporary/lock files
+.~lock.*#
+*.tmp
+
+# OS/editor debris
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Generated source-set working artefacts
+source-sets/generated/
+
+# Local Python tooling environment
+.venv/
+
+# Python generated artefacts
+__pycache__/
+*.py[cod]
