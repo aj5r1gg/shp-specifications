@@ -1,0 +1,37 @@
+{
+  "schema": "SHP/SourceSetManifest/v1",
+  "source_set": {
+    "id": "network-gateway",
+    "version": 1,
+    "purpose": "Network Gateway working source set selecting the non-Superseded Network Gateway corpus. Selection does not determine lifecycle status, authority, platform admission, tier status or certification eligibility."
+  },
+  "repository": {
+    "commit": "3ddb78c8b8342af55a53d7762128b88de9cd8260"
+  },
+  "inventory": {
+    "schema": "SHP/CorpusInventoryDiagnostic/v1",
+    "generator_sha256": "81b2ccd94d3bee0be3b12c25830d3a91fa4aca95e42a5ef6cbba94ffae90adc5"
+  },
+  "artifacts": [
+    {
+      "path": "Hardening/NetworkGateway/SHP-NetworkGateway-Tier1-Full Control Catalogue–v1.0.odt",
+      "sha256": "45696aaa9f0524bb5af8622d59166687f6538d10e5bfbff77b9abf9a92d46410"
+    },
+    {
+      "path": "Hardening/NetworkGateway/SHP-NetworkGateway-Tier2-Full Control Catalogue–v1.0.odt",
+      "sha256": "873f3142e3151013f4acff5d5663b15066c45f41070dc75ea307c9db50f9d019"
+    },
+    {
+      "path": "Hardening/NetworkGateway/SHP-NetworkGateway-Tier3-Full Control Catalogue–v1.0.odt",
+      "sha256": "5603553a6985f5112a15617e5e6650bb398853b225ffa196d1bf6afa3525277b"
+    },
+    {
+      "path": "Hardening/NetworkGateway/SHP-NetworkGatewayPlatformMathematicsSpecification–v1.1.odt",
+      "sha256": "d68dc616f96197f2e565f14c7da1a5651ed763b37fdf0a0742b6dd74ae1b0061"
+    },
+    {
+      "path": "Hardening/NetworkGateway/SHP-NetworkGatewayThreatModel-v1.1.odt",
+      "sha256": "d6a2833c5b7131794277cc0a066484d6b5a35b092f8b443465b3757d4eda9248"
+    }
+  ]
+}
