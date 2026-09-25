@@ -28,26 +28,9 @@ SCHEMA_PATH = Path(
     "source-sets/schema/source-set-manifest-v1.schema.json"
 )
 
-INVENTORY_PATH = Path(
-    "source-sets/generated/corpus-inventory.json"
-)
-
-INVENTORY_GENERATOR = Path(
+INVENTORY_GENERATOR = (
     "scripts/source-sets/inventory.py"
 )
-
-
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-
-    with path.open("rb") as handle:
-        for block in iter(
-            lambda: handle.read(1024 * 1024),
-            b"",
-        ):
-            digest.update(block)
-
-    return digest.hexdigest()
 
 
 def load_json(path: Path):
@@ -64,7 +47,7 @@ def load_json(path: Path):
         ) from None
 
 
-def git_head(repository_root: Path) -> str:
+def git_commit(repository_root: Path, commit: str) -> str:
     result = subprocess.run(
         [
             "git",
@@ -72,7 +55,7 @@ def git_head(repository_root: Path) -> str:
             str(repository_root),
             "rev-parse",
             "--verify",
-            "HEAD",
+            f"{commit}^{{commit}}",
         ],
         check=False,
         capture_output=True,
@@ -81,17 +64,53 @@ def git_head(repository_root: Path) -> str:
 
     if result.returncode != 0:
         raise ValueError(
-            "repository has no resolvable HEAD commit"
+            f"declared commit does not resolve as a commit: {commit}"
         )
 
     value = result.stdout.strip()
 
     if len(value) != 40:
         raise ValueError(
-            "repository HEAD is not a 40-character SHA-1 object ID"
+            "resolved commit is not a 40-character SHA-1 object ID"
+        )
+
+    if value != commit:
+        raise ValueError(
+            "declared commit does not resolve to itself: "
+            f"declared={commit} resolved={value}"
         )
 
     return value
+
+
+def git_blob(
+    repository_root: Path,
+    commit: str,
+    relative: str,
+) -> bytes:
+    result = subprocess.run(
+        [
+            "git",
+            "-C",
+            str(repository_root),
+            "cat-file",
+            "blob",
+            f"{commit}:{relative}",
+        ],
+        check=False,
+        capture_output=True,
+    )
+
+    if result.returncode != 0:
+        raise ValueError(
+            f"path is not a blob in declared commit: {relative}"
+        )
+
+    return result.stdout
+
+
+def sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
 
 
 def schema_errors(schema, manifest):
@@ -159,6 +178,16 @@ def validate_manifest(manifest_path: Path) -> list[str]:
             "manifest schema identifier mismatch"
         )
 
+    # A v1 source-set manifest is pinned to a Git commit tree.
+    # Current HEAD and working-tree contents do not define validity.
+    commit = manifest["repository"]["commit"]
+
+    try:
+        git_commit(repository_root, commit)
+    except ValueError as exc:
+        failures.append(f"repository:{exc}")
+        return failures
+
     # Duplicate paths are semantically ambiguous even though each
     # individual artifact object may be schema-valid.
     seen_paths = set()
@@ -174,31 +203,19 @@ def validate_manifest(manifest_path: Path) -> list[str]:
 
         seen_paths.add(relative)
 
-        candidate = (
-            repository_root / relative
-        ).resolve()
-
         try:
-            candidate.relative_to(repository_root)
-        except ValueError:
+            data = git_blob(
+                repository_root,
+                commit,
+                relative,
+            )
+        except ValueError as exc:
             failures.append(
-                f"artifact:{relative}: path escapes repository"
+                f"artifact:{relative}: {exc}"
             )
             continue
 
-        if not candidate.exists():
-            failures.append(
-                f"artifact:{relative}: file does not exist"
-            )
-            continue
-
-        if not candidate.is_file():
-            failures.append(
-                f"artifact:{relative}: not a regular file"
-            )
-            continue
-
-        actual_hash = sha256(candidate)
+        actual_hash = sha256_bytes(data)
         expected_hash = artifact["sha256"]
 
         if actual_hash != expected_hash:
@@ -207,35 +224,33 @@ def validate_manifest(manifest_path: Path) -> list[str]:
                 f"expected={expected_hash} actual={actual_hash}"
             )
 
-    # The inventory is diagnostic input. Binding to it does not make
-    # inventory observations normative SHP facts.
-    try:
-        inventory = load_json(INVENTORY_PATH)
-    except ValueError as exc:
-        failures.append(f"inventory:{exc}")
-    else:
-        summary = inventory.get("summary")
+    # Inventory observations remain diagnostic and non-normative.
+    # The pinned manifest records the inventory schema identifier and
+    # binds generator provenance to the generator blob in the same
+    # declared commit. Generated inventory output is not a pinned
+    # verification dependency.
+    actual_inventory_schema = manifest["inventory"]["schema"]
 
-        if not isinstance(summary, dict):
-            actual_inventory_schema = None
-        else:
-            actual_inventory_schema = summary.get("schema")
-
-        if actual_inventory_schema != INVENTORY_SCHEMA:
-            failures.append(
-                "inventory:schema mismatch: "
-                f"expected={INVENTORY_SCHEMA!r} "
-                f"actual={actual_inventory_schema!r}"
-            )
-
-    if not INVENTORY_GENERATOR.is_file():
+    if actual_inventory_schema != INVENTORY_SCHEMA:
         failures.append(
-            "inventory:generator does not exist: "
-            f"{INVENTORY_GENERATOR}"
+            "inventory:schema mismatch: "
+            f"expected={INVENTORY_SCHEMA!r} "
+            f"actual={actual_inventory_schema!r}"
+        )
+
+    try:
+        generator_data = git_blob(
+            repository_root,
+            commit,
+            INVENTORY_GENERATOR,
+        )
+    except ValueError as exc:
+        failures.append(
+            f"inventory:generator: {exc}"
         )
     else:
-        actual_generator_hash = sha256(
-            INVENTORY_GENERATOR
+        actual_generator_hash = sha256_bytes(
+            generator_data
         )
         expected_generator_hash = (
             manifest["inventory"]["generator_sha256"]
@@ -246,21 +261,6 @@ def validate_manifest(manifest_path: Path) -> list[str]:
                 "inventory:generator SHA-256 mismatch: "
                 f"expected={expected_generator_hash} "
                 f"actual={actual_generator_hash}"
-            )
-
-    # A v1 source-set manifest is pinned. No development-mode
-    # exception is permitted here.
-    try:
-        actual_head = git_head(repository_root)
-    except ValueError as exc:
-        failures.append(f"repository:{exc}")
-    else:
-        expected_head = manifest["repository"]["commit"]
-
-        if actual_head != expected_head:
-            failures.append(
-                "repository:HEAD mismatch: "
-                f"expected={expected_head} actual={actual_head}"
             )
 
     return failures
