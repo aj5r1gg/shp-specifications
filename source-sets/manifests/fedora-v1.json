@@ -1,0 +1,157 @@
+{
+  "schema": "SHP/SourceSetManifest/v1",
+  "source_set": {
+    "id": "fedora",
+    "version": 1,
+    "purpose": "Fedora working source set selecting the non-Superseded Fedora corpus. Selection does not determine lifecycle status, authority, platform admission, tier status or certification eligibility."
+  },
+  "repository": {
+    "commit": "3ddb78c8b8342af55a53d7762128b88de9cd8260"
+  },
+  "inventory": {
+    "schema": "SHP/CorpusInventoryDiagnostic/v1",
+    "generator_sha256": "81b2ccd94d3bee0be3b12c25830d3a91fa4aca95e42a5ef6cbba94ffae90adc5"
+  },
+  "artifacts": [
+    {
+      "path": "Hardening/Fedora/Fedora-Cross-TierGovernanceStack-v2.0.odt",
+      "sha256": "cf50b6e408f428391728d9550332c777d4b937bb9457216b69f2de6a6ef6541a"
+    },
+    {
+      "path": "Hardening/Fedora/Governance Stack/FedoraAmendment-n-VersioningDisciplinePolicy-v1.1.odt",
+      "sha256": "d2dff9f7a17a5617516ec63465f2a0f3cc1fe132bbfec020ecfce4f715073a1d"
+    },
+    {
+      "path": "Hardening/Fedora/Governance Stack/FedoraCertificationGovernance-n-PKIPolicy-v1.1.odt",
+      "sha256": "e57f0defc762703ee5fa2215c07144f899504d25f990df7fef938064217803eb"
+    },
+    {
+      "path": "Hardening/Fedora/Governance Stack/FedoraCertificationReview-n-AppealsPolicy-v1.1.odt",
+      "sha256": "4316d03b66c654c37420b7c0a127145ce16a7e6940975932bdfaa330809996b5"
+    },
+    {
+      "path": "Hardening/Fedora/Governance Stack/FedoraEvidenceHandling-n-PrivacyPolicy-v1.1.odt",
+      "sha256": "7a3b9073ed0707b7026538fdc57aab94c706277217b61879d11de87ab3ce006f"
+    },
+    {
+      "path": "Hardening/Fedora/Governance Stack/FedoraExceptionPolicy(Framework)-v1.1.odt",
+      "sha256": "c9b21abb97b96b2460d46fc1da0512959428af945d108b9c1b2c351068165f03"
+    },
+    {
+      "path": "Hardening/Fedora/Governance Stack/FedoraIncidentClassification-n-AttributionStandard-v1.1.odt",
+      "sha256": "2d696587cfa966a5c1dbfd4a0bc2e4187d594ef46825ce9487e98d6ec356a34a"
+    },
+    {
+      "path": "Hardening/Fedora/Governance Stack/FedoraOperatingManual-v1.1.odt",
+      "sha256": "eb8766336569110e828654b3a58422e1bcaaf8ba8192f655e31c71e24fcaadd1"
+    },
+    {
+      "path": "Hardening/Fedora/Governance Stack/FedoraRecovery-n-EmergencyProcedures-v1.1.odt",
+      "sha256": "5397626aa1799c440fa1aabed81e305c1f5049eb61e24d29db5f9e7c64251a13"
+    },
+    {
+      "path": "Hardening/Fedora/Governance Stack/FedoraToolingIntegrity-n-DeterministicVerificationPolicy-v1.1.odt",
+      "sha256": "b661e888263589d250a50056a1be6d5069fae9c4ebfc293b2fcfdde19c0e095a"
+    },
+    {
+      "path": "Hardening/Fedora/SHP-FedoraCertificationMathematicsSpecification–v1.0.odt",
+      "sha256": "970ba3f0e9cfa5bb440608bb6082c1ac65cc7ca75ad19a416d8b77f5a58bf425"
+    },
+    {
+      "path": "Hardening/Fedora/ThreatModelling-v2.0.odt",
+      "sha256": "9b6be64cfc7089d64f2f8a54bf874eefd99e3f57168ea1e7cd318146bbf88cdf"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/FedoraActionContract-v0.3.odt",
+      "sha256": "d5f86c35fa332e503b8166b2b1b8347a1cec22ea772661c9cc0ae5a3f4655b58"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Hardening-DocumentsSet.odt",
+      "sha256": "8c5d6e2c20531f1414fc6d56d00fe5e8585aa7c89bffaa533af33bdb40c5fa96"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier1/Fedora-Tier1-BoundaryThreat.png",
+      "sha256": "9d1dc4712c56b5431f50dfdea7ccc19ab18c66520a58d1c3194a9f54adc1d5c0"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier1/Teir1-TechnicalSpecification-v2.2.odt",
+      "sha256": "beec32cfc69ef0cdab366223fe7f059c4372de7bf000b41d4b52a4d5e04e60ef"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier1/Tier1-ChangeLog-n-MigrationGuide-v1.2.odt",
+      "sha256": "7eb680e7116bdba4e59b18beffc66d5558e404a0efc5bbeacc30b7101d751c20"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier1/Tier1-ClientAcceptanceForm.odt",
+      "sha256": "9b8a518741bc731f604f5b3e716f543771cfdaecb11fb89c8b7603a944a15ffa"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier1/Tier1-FullControlCatalog-v3.6.odt",
+      "sha256": "ff8dd69457e3cab51090a5b5c0a944e766ee40f9ea74cb8ac8983f77f98202be"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier1/Tier1-MasterIndex-v2.1.odt",
+      "sha256": "19c51965823a355dcf83ce4fc468f50739198d4b0a0debf99321f25f9ed1e06f"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier1/Tier1-OperatingManual-v1.2.odt",
+      "sha256": "9efaa8e20b4755bfcffed0bb5d0201e179787bf9c8fc8ef24ecb12ee898ac160"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier1/Tier1-SupportBoundaryStatement-v1.1.odt",
+      "sha256": "dd240ed33ca9cf775864c0ecf61a3035ebf25e5d3715366180b2248f3d253198"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier1/Tier1-VerificationStandard-v1.2.odt",
+      "sha256": "410e6f9b2f9d675b922e9e139253f9007e4fe8b1454b8929112c72f60de7a80c"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier2/Addons/T2-DEV-VSCODE-001-VSCodeExtensionGovernance.odt",
+      "sha256": "ca67f4fb7f67978b3efc9381f5075f1cc3ec9ad5bd1daa321aee773337148239"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier2/Tier2-AssertionsSpecification.odt",
+      "sha256": "5d32e30b561c816c7b8ddc3aae49273d68156f2a7564c214f94fdf0943ef03b7"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier2/Tier2-AttackSurface-ControlCoverageMap.odt",
+      "sha256": "746b7f08727d96533acec248e17e4e0aba4dccf03e401567320729810e0501f6"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier2/Tier2-DriftSeverityClassificationOverlay.odt",
+      "sha256": "13dae35f4effac0f01e77c4faeed24b2aa0b6ad2c8badff18ba16638459aea80"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier2/Tier2-FullControlCatalog.odt",
+      "sha256": "881bf07804277c46167555ccf248673cc3dec803fe661e257c461035936cebd9"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier2/Tier2-TechnicalSpecification-AppendixD.odt",
+      "sha256": "3f1a0945d0ad65040cb79e1f0fe498b52e991eeb72b8b27971733b7ec853b779"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier2/Tier2-TechnicalSpecification-AppendixK.odt",
+      "sha256": "c969fee37ebf93ac00e30f42189e65de67939efde988201826a0e61e22b40e67"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier2/Tier2-TechnicalSpecification-v1.3.odt",
+      "sha256": "6f4191c9cc858e19a3e3831e3d24214e7ec479e1bd0a1ceae49688206ae04968"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier2/Tier2.odt",
+      "sha256": "69d9181d6ce1bf02b052357f4f935bc56adb8eba270ce2db607a0004c2d48216"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier3/Tier3-FullControl-Index.odt",
+      "sha256": "8de77d84ac96981a734356cd6ed17205e2dc1e8e5dcd00d73db1fdd1a5db5479"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier3/Tier3-FullControlCatalog.odt",
+      "sha256": "1b5d4747c21f855fc95dc7f40c71f1d10389fe79fc5175ed8db1dce3f5d0b4ef"
+    },
+    {
+      "path": "Hardening/Fedora/Tiers/Tier3/Tier3.odt",
+      "sha256": "061de0065eb10a55cfdffd59b8b35ea5f2531a0a49f3809a527e42ef66b90658"
+    }
+  ]
+}
