@@ -1,0 +1,40 @@
+{
+  "schema": "SHP/PlatformAdmissionRecord/v1",
+  "record_id": "SHP-PAR-FEDORA-1.0",
+  "platform_id": "fedora",
+  "version": "1.0",
+  "status": "Draft",
+  "admission_status": "unsupported",
+  "effective_date": null,
+  "platform_boundary": "Fedora operating-system platform within the formally governed SHP Fedora specification boundary.",
+  "specification_set": [
+    "SHP Charter v3.0",
+    "SHP Specification Authority Registry v2.1",
+    "SHP Platform Admission Record Specification v1.0",
+    "SHP Tier Mathematics Specification v2.2",
+    "SHP Certification Evidence Model v2.0",
+    "SHP Control Evaluation Language v2.1",
+    "SHP Verification Engine Architecture v2.0",
+    "SHP Certification Decision Engine v2.1",
+    "SHP Certification Trust Architecture v2.2",
+    "SHP Fedora Certification Mathematics Specification v1.0",
+    "Tier 1 Full Control Catalogue v3.6",
+    "Tier 2 Full Control Catalogue",
+    "Tier 3 Full Control Catalogue"
+  ],
+  "threat_model": "Unknown / Requires Testing",
+  "certification_model": "tiered",
+  "platform_mathematics": "SHP Fedora Certification Mathematics Specification v1.0",
+  "control_catalogues": [
+    "Tier 1 Full Control Catalogue v3.6",
+    "Tier 2 Full Control Catalogue",
+    "Tier 3 Full Control Catalogue"
+  ],
+  "nnc_basis": "Unknown / Requires Testing",
+  "verification_model": "Unknown / Requires Testing",
+  "evidence_model": "SHP Certification Evidence Model v2.0",
+  "trust_architecture": "SHP Certification Trust Architecture v2.2",
+  "platform_intermediate": "Unknown / Requires Testing",
+  "drift_model": "Unknown / Requires Testing",
+  "recovery_model": "Unknown / Requires Testing"
+}

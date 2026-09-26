@@ -1,0 +1,40 @@
+{
+  "schema": "SHP/PlatformAdmissionRecord/v1",
+  "record_id": "SHP-PAR-NETWORK-GATEWAY-1.0",
+  "platform_id": "network-gateway",
+  "version": "1.0",
+  "status": "Draft",
+  "admission_status": "unsupported",
+  "effective_date": null,
+  "platform_boundary": "Network Gateway platform within the formally governed SHP Network Gateway platform specification boundary.",
+  "specification_set": [
+    "SHP Charter v3.0",
+    "SHP Specification Authority Registry v2.1",
+    "SHP Platform Admission Record Specification v1.0",
+    "SHP Tier Mathematics Specification v2.2",
+    "SHP Certification Evidence Model v2.0",
+    "SHP Control Evaluation Language v2.1",
+    "SHP Verification Engine Architecture v2.0",
+    "SHP Certification Decision Engine v2.1",
+    "SHP Certification Trust Architecture v2.2",
+    "SHP Network Gateway Platform Mathematics Specification v1.1",
+    "SHP Network Gateway Tier 1 Full Control Catalogue v1.0",
+    "SHP Network Gateway Tier 2 Full Control Catalogue v1.0",
+    "SHP Network Gateway Tier 3 Full Control Catalogue v1.0"
+  ],
+  "threat_model": "SHP Network Gateway Threat Model v1.1",
+  "certification_model": "tiered",
+  "platform_mathematics": "SHP Network Gateway Platform Mathematics Specification v1.1",
+  "control_catalogues": [
+    "SHP Network Gateway Tier 1 Full Control Catalogue v1.0",
+    "SHP Network Gateway Tier 2 Full Control Catalogue v1.0",
+    "SHP Network Gateway Tier 3 Full Control Catalogue v1.0"
+  ],
+  "nnc_basis": "Unknown / Requires Testing",
+  "verification_model": "Unknown / Requires Testing",
+  "evidence_model": "SHP Certification Evidence Model v2.0",
+  "trust_architecture": "SHP Certification Trust Architecture v2.2",
+  "platform_intermediate": "Unknown / Requires Testing",
+  "drift_model": "Unknown / Requires Testing",
+  "recovery_model": "Unknown / Requires Testing"
+}
