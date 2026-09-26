@@ -1,0 +1,41 @@
+{
+  "schema": "SHP/PlatformAdmissionRecord/v1",
+  "record_id": "SHP-PAR-FEDORA-1.1",
+  "platform_id": "fedora",
+  "version": "1.1",
+  "status": "Active",
+  "admission_status": "supported",
+  "effective_date": "2026-09-26",
+  "platform_boundary": "Fedora operating-system platform within the formally governed SHP Fedora specification boundary.",
+  "specification_set": [
+    "SHP Charter v3.0",
+    "SHP Specification Authority Registry v2.1",
+    "SHP Platform Admission Record Specification v1.0",
+    "SHP Tier Mathematics Specification v2.2",
+    "SHP Certification Evidence Model v2.0",
+    "SHP Control Evaluation Language v2.1",
+    "SHP Verification Engine Architecture v2.0",
+    "SHP Certification Decision Engine v2.1",
+    "SHP Certification Trust Architecture v2.2",
+    "SHP Fedora Certification Mathematics Specification v1.1",
+    "Fedora Tier 1 Full Control Catalog v3.7",
+    "Fedora Tier 2 Full Control Catalog v2.1",
+    "Fedora Tier 3 Full Control Catalog v1.1",
+    "SHP Fedora Threat Model Specification v1.0"
+  ],
+  "threat_model": "SHP Fedora Threat Model Specification v1.0",
+  "certification_model": "tiered",
+  "platform_mathematics": "SHP Fedora Certification Mathematics Specification v1.1",
+  "control_catalogues": [
+    "Fedora Tier 1 Full Control Catalog v3.7",
+    "Fedora Tier 2 Full Control Catalog v2.1",
+    "Fedora Tier 3 Full Control Catalog v1.1"
+  ],
+  "nnc_basis": "Fedora Tier 1, Tier 2 and Tier 3 Full Control Catalogs",
+  "verification_model": "SHP Fedora Certification Mathematics Specification v1.1 plus per-control deterministic verification semantics",
+  "evidence_model": "SHP Certification Evidence Model v2.0",
+  "trust_architecture": "SHP Certification Trust Architecture v2.2",
+  "platform_intermediate": "SHP-FEDORA-INTERMEDIATE-1.0",
+  "drift_model": "Per-control drift, downgrade and revocation semantics in the applicable Fedora control catalogs",
+  "recovery_model": "Per-control recovery procedures and mandatory re-verification semantics in the applicable Fedora control catalogs"
+}
