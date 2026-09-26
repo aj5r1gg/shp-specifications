@@ -1,0 +1,24 @@
+{
+  "schema": "SHP/PlatformIntermediateTrustReference/v1",
+  "reference_id": "SHP-FEDORA-INTERMEDIATE-1.0",
+  "platform_id": "fedora",
+  "status": "Active",
+  "authority_name": "SHP Fedora Intermediate Authority",
+  "authority_short_name": "FI-CA",
+  "issuer": "SHP Root Authority",
+  "purpose": "Sign SHP Fedora certification artefacts only",
+  "cross_platform_signing": false,
+  "intermediate_signing": false,
+  "cryptographic_suite": {
+    "key_algorithm": "RSA",
+    "minimum_key_bits": 4096,
+    "hash_algorithm": "SHA-256"
+  },
+  "validity_period": "P3Y",
+  "rotation_cadence": "P2Y",
+  "private_key_storage": "offline-or-dedicated-signing-domain",
+  "root_private_key_online": false,
+  "compromise_action": "Revoke intermediate; classify certificates issued beneath it as Revoked — Not Certified; generate replacement intermediate; require re-certification.",
+  "private_key_present_in_record": false,
+  "effective_date": "2026-09-26"
+}
