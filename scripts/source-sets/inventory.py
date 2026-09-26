@@ -483,15 +483,6 @@ def inspect(path: Path):
             "missing_or_unparsed:authority_classification"
         )
 
-    if "Superseded" in rel.parts:
-        status = record["metadata"].get("status")
-
-        if status and status.lower() != "superseded":
-            record["warnings"].append(
-                "path_status_mismatch:"
-                "under_Superseded_but_metadata_not_Superseded"
-            )
-
     return record
 
 def main():
