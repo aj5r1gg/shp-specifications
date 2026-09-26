@@ -3,9 +3,9 @@
   "record_id": "SHP-PAR-NETWORK-GATEWAY-1.0",
   "platform_id": "network-gateway",
   "version": "1.0",
-  "status": "Draft",
-  "admission_status": "unsupported",
-  "effective_date": null,
+  "status": "Active",
+  "admission_status": "supported",
+  "effective_date": "2026-09-26",
   "platform_boundary": "Network Gateway platform within the formally governed SHP Network Gateway platform specification boundary.",
   "specification_set": [
     "SHP Charter v3.0",
@@ -17,24 +17,24 @@
     "SHP Verification Engine Architecture v2.0",
     "SHP Certification Decision Engine v2.1",
     "SHP Certification Trust Architecture v2.2",
-    "SHP Network Gateway Platform Mathematics Specification v1.1",
-    "SHP Network Gateway Tier 1 Full Control Catalogue v1.0",
-    "SHP Network Gateway Tier 2 Full Control Catalogue v1.0",
-    "SHP Network Gateway Tier 3 Full Control Catalogue v1.0"
+    "SHP Network Gateway Platform Mathematics Specification v1.4",
+    "SHP Network Gateway Tier 1 Full Control Catalogue v1.1",
+    "SHP Network Gateway Tier 2 Full Control Catalogue v1.1",
+    "SHP Network Gateway Tier 3 Full Control Catalogue v1.1"
   ],
-  "threat_model": "SHP Network Gateway Threat Model v1.1",
+  "threat_model": "SHP Network Gateway Threat Model v1.2",
   "certification_model": "tiered",
-  "platform_mathematics": "SHP Network Gateway Platform Mathematics Specification v1.1",
+  "platform_mathematics": "SHP Network Gateway Platform Mathematics Specification v1.4",
   "control_catalogues": [
-    "SHP Network Gateway Tier 1 Full Control Catalogue v1.0",
-    "SHP Network Gateway Tier 2 Full Control Catalogue v1.0",
-    "SHP Network Gateway Tier 3 Full Control Catalogue v1.0"
+    "SHP Network Gateway Tier 1 Full Control Catalogue v1.1",
+    "SHP Network Gateway Tier 2 Full Control Catalogue v1.1",
+    "SHP Network Gateway Tier 3 Full Control Catalogue v1.1"
   ],
-  "nnc_basis": "Unknown / Requires Testing",
-  "verification_model": "Unknown / Requires Testing",
+  "nnc_basis": "SHP Network Gateway Tier 1, Tier 2 and Tier 3 Full Control Catalogues",
+  "verification_model": "SHP Network Gateway Platform Mathematics Specification v1.4 plus per-control verification semantics",
   "evidence_model": "SHP Certification Evidence Model v2.0",
   "trust_architecture": "SHP Certification Trust Architecture v2.2",
-  "platform_intermediate": "Unknown / Requires Testing",
-  "drift_model": "Unknown / Requires Testing",
-  "recovery_model": "Unknown / Requires Testing"
+  "platform_intermediate": "SHP-NETWORK-GATEWAY-INTERMEDIATE-1.0",
+  "drift_model": "Per-control drift, downgrade and revocation semantics in the applicable Network Gateway control catalogues",
+  "recovery_model": "Per-control recovery procedures and mandatory re-verification semantics in the applicable Network Gateway control catalogues"
 }
