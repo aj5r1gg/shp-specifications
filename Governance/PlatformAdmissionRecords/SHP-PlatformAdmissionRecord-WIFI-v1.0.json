@@ -30,11 +30,11 @@
     "SHP Wi-Fi Tier 2 Full Control Catalogue v1.0",
     "SHP Wi-Fi Tier 3 Full Control Catalogue v1.0"
   ],
-  "nnc_basis": "Unknown / Requires Testing",
-  "verification_model": "Unknown / Requires Testing",
+  "nnc_basis": "SHP Wi-Fi Tier 1, Tier 2 and Tier 3 Full Control Catalogues v1.0",
+  "verification_model": "SHP Wi-Fi Control Catalogue Mathematics v1.0 plus per-control verification_method and expected_verification_state semantics",
   "evidence_model": "SHP Certification Evidence Model v2.0",
   "trust_architecture": "SHP Certification Trust Architecture v2.2",
   "platform_intermediate": "Unknown / Requires Testing",
-  "drift_model": "Unknown / Requires Testing",
-  "recovery_model": "Unknown / Requires Testing"
+  "drift_model": "Per-control drift_severity_if_failed, downgrade_effect_class, revocation_trigger_if_failed and re-verification semantics in the applicable Wi-Fi control catalogues",
+  "recovery_model": "Per-control recovery_procedure and reverification_required_after_recovery semantics in the applicable Wi-Fi control catalogues"
 }
